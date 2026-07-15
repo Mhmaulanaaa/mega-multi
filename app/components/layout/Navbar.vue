@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted } from "vue";
-import { Menu, X } from "lucide-vue-next";
+import { Menu, X, ChevronRight } from "lucide-vue-next";
 
 const route = useRoute();
 
@@ -47,25 +47,31 @@ onUnmounted(() => {
 <template>
   <header
     :class="[
-      'fixed inset-x-0 top-0 z-50 transition-all duration-500',
+      'fixed inset-x-0 top-0 z-50 transition-all duration-300',
       isScrolled
-        ? 'bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-lg'
+        ? 'border-b border-[#272A30] bg-[#0B0C10]/90 backdrop-blur-xl'
         : 'bg-transparent',
     ]"
   >
-    <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 lg:px-10">
+    <div
+      class="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-6 lg:px-12"
+    >
       <!-- Logo -->
-      <NuxtLink to="/" class="flex items-center gap-3">
+      <NuxtLink to="/" class="group flex items-center gap-3">
         <div
-          class="flex h-11 w-11 items-center justify-center bg-[#F15A24] font-black text-xl text-white"
+          class="flex h-10 w-10 items-center justify-center bg-[#F15A24] font-heading text-xl text-white transition-colors group-hover:bg-[#C43015]"
         >
           M
         </div>
 
-        <div>
-          <h1 class="font-bold uppercase tracking-wide">Mega Multi Pegas</h1>
+        <div class="hidden sm:flex flex-col leading-none">
+          <span class="font-heading text-base tracking-wider text-white">
+            MEGA MULTI PEGAS
+          </span>
 
-          <p class="text-xs uppercase tracking-[3px] text-gray-400">EST. 1985 • PT.</p>
+          <span class="mt-0.5 text-[10px] tracking-[0.3em] text-[#9CA3AF]">
+            EST. 1985 • PT.
+          </span>
         </div>
       </NuxtLink>
 
@@ -75,7 +81,7 @@ onUnmounted(() => {
           v-for="menu in menus"
           :key="menu.to"
           :to="menu.to"
-          class="relative pb-2 text-sm font-medium uppercase tracking-[3px] transition"
+          class="relative pb-2 text-xs font-medium uppercase tracking-[3px] transition"
           :class="
             route.path === menu.to ? 'text-[#F15A24]' : 'text-white hover:text-[#F15A24]'
           "
@@ -94,25 +100,30 @@ onUnmounted(() => {
       </nav>
 
       <!-- Right -->
-      <div class="hidden items-center gap-4 lg:flex">
+      <div class="flex items-center gap-3">
         <button
-          class="border border-white/20 px-4 py-2 text-xs uppercase transition hover:bg-white hover:text-black"
+          class="group hidden items-center gap-2 border border-white/10 px-3 py-2 transition-colors hover:border-[#F15A24] sm:flex"
         >
-          ID
+          <span class="font-heading text-xs tracking-widest text-[#F15A24]"> ID </span>
+
+          <span class="text-white/20">/</span>
+
+          <span class="font-heading text-xs tracking-widest text-white/40"> EN </span>
         </button>
 
         <button
-          class="bg-[#F15A24] px-6 py-3 text-sm font-semibold uppercase transition hover:bg-orange-600"
+          class="hidden items-center gap-2 bg-[#F15A24] px-5 py-3 font-heading text-xs uppercase tracking-widest text-white transition-colors hover:bg-[#C43015] md:inline-flex"
         >
-          Minta Penawaran →
+          Minta Penawaran
+
+          <ChevronRight class="h-4 w-4" />
+        </button>
+
+        <button class="p-2 text-white lg:hidden" @click="mobileMenu = !mobileMenu">
+          <Menu v-if="!mobileMenu" class="h-6 w-6" />
+          <X v-else class="h-6 w-6" />
         </button>
       </div>
-
-      <!-- Mobile Button -->
-      <button class="text-white lg:hidden" @click="mobileMenu = !mobileMenu">
-        <Menu v-if="!mobileMenu" :size="28" />
-        <X v-else :size="28" />
-      </button>
     </div>
 
     <!-- Mobile Menu -->
@@ -126,7 +137,7 @@ onUnmounted(() => {
     >
       <div
         v-if="mobileMenu"
-        class="border-t border-white/10 bg-black/95 backdrop-blur-xl lg:hidden"
+        class="border-t border-[#272A30] bg-[#0B0C10]/95 backdrop-blur-xl lg:hidden"
       >
         <div class="space-y-5 p-6">
           <NuxtLink

@@ -22,49 +22,67 @@ import heroImage from "~/assets/images/herosection.jpg";
     <div class="absolute inset-0 hero-grid"></div>
 
     <!-- Content -->
-    <div class="relative z-20 mx-auto flex h-full max-w-7xl items-center px-8 lg:px-12">
-      <div class="mt-28 max-w-3xl">
+    <div
+      class="relative z-20 mx-auto flex h-full w-full max-w-7xl items-center px-8 lg:px-12"
+    >
+      <div class="mt-28 w-full">
         <!-- Small Label -->
         <div
-          class="mb-5 flex items-center gap-4 text-xs uppercase tracking-[6px] text-[#F15A24]"
+          class="mb-5 flex items-center gap-4 text-xs uppercase tracking-[6px] text-[#F15A24] animate-fade-up"
         >
           <div class="h-px w-16 bg-[#F15A24]"></div>
-
           Presisi Dalam Setiap Gerakan
         </div>
 
         <!-- Heading -->
         <h1 class="font-heading uppercase leading-[0.85] text-white">
-          <span class="block text-[72px] md:text-[110px] xl:text-[145px]">
+          <span
+            class="block text-[72px] md:text-[110px] xl:text-[200px] animate-fade-up"
+            style="animation-delay: 0.2s"
+          >
             BAJA YANG
           </span>
 
-          <span class="block text-[72px] md:text-[110px] xl:text-[145px] text-[#F15A24]">
+          <span
+            class="block text-[72px] md:text-[110px] xl:text-[200px] text-[#F15A24] animate-fade-up"
+            style="animation-delay: 0.4s"
+          >
             MENOPANG
           </span>
 
-          <span class="block text-[72px] md:text-[110px] xl:text-[145px]">
+          <span
+            class="block text-[72px] md:text-[110px] xl:text-[200px] animate-fade-up"
+            style="animation-delay: 0.6s"
+          >
             INDUSTRI.
           </span>
         </h1>
 
-        <p class="mt-8 max-w-lg leading-8 text-gray-300">
-          PT. Mega Multi Pegas memproduksi leaf spring kelas berat untuk kendaraan
-          komersial, niaga, dan industri di seluruh Indonesia dan Asia Tenggara.
-        </p>
-
-        <div class="mt-10 flex gap-5">
-          <button
-            class="bg-[#F15A24] px-8 py-4 text-xs font-semibold uppercase tracking-[2px] transition hover:bg-orange-600"
+        <!-- Deskripsi + Button -->
+        <div
+          class="mt-8 flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between animate-fade-up delay-500"
+        >
+          <p
+            class="max-w-xl leading-10 text-gray-300 animate-fade-up"
+            style="animation-delay: 0.8s"
           >
-            Lihat Produk →
-          </button>
+            PT. Mega Multi Pegas memproduksi leaf spring kelas berat untuk kendaraan
+            komersial, niaga, dan industri di seluruh Indonesia dan Asia Tenggara.
+          </p>
 
-          <button
-            class="border border-white/20 px-8 py-4 text-xs font-semibold uppercase tracking-[2px] backdrop-blur hover:bg-white hover:text-black transition"
-          >
-            Tentang Kami ↗
-          </button>
+          <div class="flex shrink-0 gap-5 animate-fade-up" style="animation-delay: 1s">
+            <button
+              class="bg-[#F15A24] px-8 py-4 text-xs font-semibold uppercase tracking-[2px] transition hover:bg-orange-600"
+            >
+              Lihat Produk →
+            </button>
+
+            <button
+              class="border border-white/20 px-8 py-4 text-xs font-semibold uppercase tracking-[2px] backdrop-blur transition hover:bg-white hover:text-black"
+            >
+              Tentang Kami ↗
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -101,6 +119,36 @@ import heroImage from "~/assets/images/herosection.jpg";
 
   to {
     transform: scale(1.08);
+  }
+}
+
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeUp 1s ease forwards;
+}
+
+.delay-200 {
+  animation-delay: 0.2s;
+}
+
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.delay-700 {
+  animation-delay: 0.7s;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>

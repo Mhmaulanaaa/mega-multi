@@ -1,23 +1,37 @@
 <template>
-  <section class="bg-[#0D0D0D] py-20">
-    <div
-      class="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 border border-[#2B2B2B] px-10 py-12 lg:flex-row"
-    >
-      <div>
-        <p class="text-xs uppercase tracking-[5px] text-[#F15A24]">Mulai Proyek Anda</p>
+  <section class="relative overflow-hidden py-24">
+    <!-- Background Grid -->
+    <div class="absolute inset-0 hero-grid opacity-40"></div>
 
-        <h2 class="font-heading mt-3 text-5xl uppercase text-white">
-          READY TO ENGINEER THE NEXT-
-          <br />
-          GENERATION SUSPENSION?
-        </h2>
-      </div>
-
-      <button
-        class="bg-[#F15A24] px-8 py-4 uppercase tracking-[3px] transition hover:bg-orange-600"
+    <div class="relative mx-auto max-w-[1440px] px-6 lg:px-12">
+      <div
+        class="flex flex-col gap-8 border border-[#272A30] bg-gradient-to-br from-[#15171C] to-[#0B0C10] p-10 md:p-16 lg:flex-row lg:items-center lg:justify-between"
       >
-        Hubungi Kami →
-      </button>
+        <!-- Left -->
+        <div>
+          <p class="font-heading mb-3 text-xs uppercase tracking-[0.3em] text-[#F15A24]">
+            — MINTA PENAWARAN
+          </p>
+
+          <h2
+            class="font-heading max-w-2xl text-3xl uppercase leading-tight tracking-tight text-white md:text-5xl"
+          >
+            READY TO ENGINEER THE NEXT-GENERATION SUSPENSION?
+          </h2>
+        </div>
+
+        <!-- Right -->
+        <button
+          class="inline-flex items-center gap-2 whitespace-nowrap bg-[#F15A24] px-8 py-5 font-heading text-sm uppercase tracking-widest text-white transition-all duration-300 hover:bg-[#C43015] hover:shadow-[0_15px_35px_rgba(241,90,36,0.35)]"
+        >
+          Hubungi Kami
+          <ArrowRight class="h-4 w-4" />
+        </button>
+      </div>
     </div>
   </section>
 </template>
+
+<script setup lang="ts">
+import { ArrowRight } from "lucide-vue-next";
+</script>

@@ -11,13 +11,13 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
-      title: 'Nuxt 3 Tailwind CSS',
-      titleTemplate: '%s  | Tailwind CSS',
+      title: 'Mega Multi Pegas',
+      titleTemplate: '%s  | Landing Page',
 
       meta: [
         {
           name: 'description',
-          content: 'Nuxt 3 Tailwind CSS'
+          content: 'Mega Multi Pegas'
         }
       ]
     }

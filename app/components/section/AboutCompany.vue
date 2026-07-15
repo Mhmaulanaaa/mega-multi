@@ -1,49 +1,57 @@
 <template>
-  <section class="bg-[#101010] py-24">
-    <div class="mx-auto max-w-7xl px-6">
-      <div class="grid gap-14 lg:grid-cols-2">
-        <!-- Left -->
+  <section class="relative overflow-hidden bg-[#101010] py-24 md:py-32">
+    <!-- Background Grid -->
+    <div class="absolute inset-0 hero-grid opacity-40"></div>
 
-        <div>
-          <p class="text-xs uppercase tracking-[5px] text-[#F15A24]">
-            Tentang Perusahaan
+    <div
+      class="relative mx-auto grid max-w-[1440px] gap-10 px-6 lg:grid-cols-12 lg:px-12"
+    >
+      <!-- Left -->
+      <div class="lg:col-span-5">
+        <div class="max-w-3xl">
+          <p
+            class="font-heading mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#F15A24] md:text-sm"
+          >
+            — TENTANG PERUSAHAAN
           </p>
 
-          <h2 class="font-heading mt-4 text-6xl leading-none uppercase text-white">
+          <h2
+            class="font-heading text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+          >
             MANUFAKTUR LEAF SPRING TERDEPAN DI INDONESIA
           </h2>
-
-          <p class="mt-8 leading-8 text-gray-400">
-            Sejak 1985, kami memproduksi pegas daun berkualitas tinggi untuk kendaraan
-            niaga berat dengan fasilitas modern dan pengendalian kualitas berstandar
-            internasional.
-          </p>
-
-          <button
-            class="mt-8 border-b border-[#F15A24] pb-2 text-sm uppercase tracking-[3px] text-[#F15A24]"
-          >
-            Profil →
-          </button>
         </div>
 
-        <!-- Right -->
+        <p class="mt-6 text-base leading-relaxed text-[#9CA3AF] md:text-lg">
+          Sejak 1985, kami menempa pegas daun berkualitas tinggi untuk truk, bus, dan
+          kendaraan niaga berat. Dengan fasilitas modern dan standar kualitas
+          internasasional, kami menghadirkan produk yang kuat, presisi, dan terpercaya.
+        </p>
 
-        <div class="grid gap-5 sm:grid-cols-2">
-          <div
-            v-for="card in cards"
-            :key="card.title"
-            class="border border-[#2B2B2B] p-8 hover:border-[#F15A24] transition"
-          >
-            <div class="text-[#F15A24] text-xl mb-4">●</div>
+        <button
+          class="mt-8 inline-flex items-center gap-2 border-b border-[#F15A24] pb-1 font-heading text-xs uppercase tracking-[0.25em] text-[#F15A24] transition-colors hover:text-white"
+        >
+          Profil
+          <ArrowUpRight class="h-4 w-4" />
+        </button>
+      </div>
 
-            <h3 class="font-heading text-3xl uppercase text-white">
-              {{ card.title }}
-            </h3>
+      <!-- Right -->
+      <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:col-span-7">
+        <div
+          v-for="card in cards"
+          :key="card.title"
+          class="group border border-[#272A30] bg-[#15171C]/40 p-6 transition-all duration-300 hover:-translate-y-2 hover:border-[#F15A24] hover:shadow-[0_20px_40px_rgba(241,90,36,0.15)] md:p-8"
+        >
+          <component :is="card.icon" class="mb-6 h-6 w-6 text-[#F15A24]" />
 
-            <p class="mt-4 text-gray-400 leading-7">
-              {{ card.desc }}
-            </p>
-          </div>
+          <h3 class="font-heading mb-2 text-2xl uppercase tracking-tight text-white">
+            {{ card.title }}
+          </h3>
+
+          <p class="text-sm leading-relaxed text-[#9CA3AF]">
+            {{ card.desc }}
+          </p>
         </div>
       </div>
     </div>
@@ -51,22 +59,28 @@
 </template>
 
 <script setup lang="ts">
+import { ArrowUpRight, Cog, Hammer, Factory, Award } from "lucide-vue-next";
+
 const cards = [
   {
-    title: "Presisi",
-    desc: "Teknologi modern menghasilkan pegas dengan presisi tinggi.",
+    title: "PRESISI",
+    desc: "Toleransi geometri ±0,3 mm pada setiap unit produksi.",
+    icon: Cog,
   },
   {
-    title: "Daya Tahan",
-    desc: "Material premium dengan umur pakai yang panjang.",
+    title: "DAYA TAHAN",
+    desc: "Uji fatigue 100.000+ siklus untuk performa di medan ekstrem.",
+    icon: Hammer,
   },
   {
-    title: "Skala",
+    title: "SKALA",
     desc: "Kapasitas produksi besar untuk memenuhi kebutuhan industri.",
+    icon: Factory,
   },
   {
-    title: "ISO 16949",
-    desc: "Sistem manajemen mutu otomotif bersertifikasi internasional.",
+    title: "TS 16949",
+    desc: "Certified Quality Management System.",
+    icon: Award,
   },
 ];
 </script>
