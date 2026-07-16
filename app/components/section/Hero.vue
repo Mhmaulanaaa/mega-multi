@@ -28,7 +28,7 @@ import heroImage from "~/assets/images/herosection.jpg";
       <div class="mt-28 w-full">
         <!-- Small Label -->
         <div
-          class="mb-5 flex items-center gap-4 text-xs uppercase tracking-[6px] text-[#F15A24] animate-fade-up"
+          class="font-heading mb-5 flex items-center gap-4 text-md uppercase tracking-[6px] text-[#F15A24] animate-fade-up"
         >
           <div class="h-px w-16 bg-[#F15A24]"></div>
           Presisi Dalam Setiap Gerakan

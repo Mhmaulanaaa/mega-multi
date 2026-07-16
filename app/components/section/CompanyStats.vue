@@ -6,11 +6,11 @@
         :key="item.label"
         class="border-r border-[#202020] px-8 py-10 last:border-r-0"
       >
-        <h2 class="font-heading text-5xl text-white">
+        <h2 class="font-heading text-6xl text-white">
           {{ formatValue(animatedValues[index], item.suffix) }}
         </h2>
 
-        <p class="mt-2 text-xs uppercase tracking-[3px] text-gray-500">
+        <p class="mt-1 text-xs uppercase tracking-[3px] text-gray-500">
           {{ item.label }}
         </p>
       </div>
@@ -83,3 +83,9 @@ onMounted(() => {
   });
 });
 </script>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 800;
+}
+</style>

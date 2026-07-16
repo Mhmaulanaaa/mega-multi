@@ -5,7 +5,7 @@
       <div class="mb-14 flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
         <div class="max-w-3xl">
           <p
-            class="font-heading mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#F15A24] md:text-sm"
+            class="font-heading mb-4 text-md uppercase tracking-[6px] text-[#F15A24] md:text-sm"
           >
             — KATALOG PRODUK
           </p>
@@ -18,7 +18,7 @@
         </div>
 
         <button
-          class="inline-flex items-center gap-2 self-start border border-[#272A30] px-5 py-3 font-heading text-xs uppercase tracking-widest text-white transition-colors hover:border-[#F15A24] hover:text-[#F15A24]"
+          class="inline-flex items-center gap-2 self-start border border-[#272A30] px-5 py-3 font-heading text-sm uppercase tracking-widest text-white transition-colors hover:border-[#F15A24] hover:text-[#F15A24]"
         >
           Eksplorasi Semua Produk
           <ArrowRight class="h-4 w-4" />
@@ -92,3 +92,8 @@ const products = [
   },
 ];
 </script>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>

@@ -10,7 +10,7 @@
       <div class="lg:col-span-5">
         <div class="max-w-3xl">
           <p
-            class="font-heading mb-4 text-xs font-bold uppercase tracking-[0.3em] text-[#F15A24] md:text-sm"
+            class="font-heading mb-4 text-md uppercase tracking-[6px] text-[#F15A24] md:text-sm"
           >
             — TENTANG PERUSAHAAN
           </p>
@@ -29,7 +29,7 @@
         </p>
 
         <button
-          class="mt-8 inline-flex items-center gap-2 border-b border-[#F15A24] pb-1 font-heading text-xs uppercase tracking-[0.25em] text-[#F15A24] transition-colors hover:text-white"
+          class="mt-8 inline-flex items-center gap-2 border-b border-[#F15A24] pb-1 font-heading text-md uppercase tracking-[0.25em] text-[#F15A24] transition-colors hover:text-white"
         >
           Profil
           <ArrowUpRight class="h-4 w-4" />
@@ -84,3 +84,8 @@ const cards = [
   },
 ];
 </script>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>

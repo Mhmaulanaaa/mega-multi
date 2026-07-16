@@ -59,7 +59,7 @@ onUnmounted(() => {
       <!-- Logo -->
       <NuxtLink to="/" class="group flex items-center gap-3">
         <div
-          class="flex h-10 w-10 items-center justify-center bg-[#F15A24] font-heading text-xl text-white transition-colors group-hover:bg-[#C43015]"
+          class="font-heading flex h-10 w-10 items-center justify-center bg-[#F15A24] font-heading text-xl text-white transition-colors group-hover:bg-[#C43015]"
         >
           M
         </div>
@@ -69,7 +69,7 @@ onUnmounted(() => {
             MEGA MULTI PEGAS
           </span>
 
-          <span class="mt-0.5 text-[10px] tracking-[0.3em] text-[#9CA3AF]">
+          <span class="mt-0.5 text-[9px] tracking-[0.3em] text-[#9CA3AF]">
             EST. 1985 • PT.
           </span>
         </div>
@@ -81,9 +81,11 @@ onUnmounted(() => {
           v-for="menu in menus"
           :key="menu.to"
           :to="menu.to"
-          class="relative pb-2 text-xs font-medium uppercase tracking-[3px] transition"
+          class="relative pb-2 text-xs uppercase tracking-[3px] transition"
           :class="
-            route.path === menu.to ? 'text-[#F15A24]' : 'text-white hover:text-[#F15A24]'
+            route.path === menu.to
+              ? ' text-[#F15A24]'
+              : ' text-white hover:text-[#F15A24]'
           "
         >
           {{ menu.name }}
@@ -104,15 +106,15 @@ onUnmounted(() => {
         <button
           class="group hidden items-center gap-2 border border-white/10 px-3 py-2 transition-colors hover:border-[#F15A24] sm:flex"
         >
-          <span class="font-heading text-xs tracking-widest text-[#F15A24]"> ID </span>
+          <span class="text-xs tracking-widest text-[#F15A24]"> ID </span>
 
           <span class="text-white/20">/</span>
 
-          <span class="font-heading text-xs tracking-widest text-white/40"> EN </span>
+          <span class="text-xs tracking-widest text-white/40"> EN </span>
         </button>
 
         <button
-          class="hidden items-center gap-2 bg-[#F15A24] px-5 py-3 font-heading text-xs uppercase tracking-widest text-white transition-colors hover:bg-[#C43015] md:inline-flex"
+          class="hidden items-center gap-2 bg-[#F15A24] px-5 py-3 text-xs uppercase tracking-widest text-white transition-colors hover:bg-[#C43015] md:inline-flex"
         >
           Minta Penawaran
 
@@ -148,14 +150,16 @@ onUnmounted(() => {
             class="block border-b border-white/5 pb-3 uppercase tracking-[3px] transition"
             :class="
               route.path === menu.to
-                ? 'text-[#F15A24]'
-                : 'text-white hover:text-[#F15A24]'
+                ? 'font-heading text-[#F15A24]'
+                : 'font-heading text-white hover:text-[#F15A24]'
             "
           >
             {{ menu.name }}
           </NuxtLink>
 
-          <button class="mt-4 w-full bg-[#F15A24] py-3 font-semibold uppercase">
+          <button
+            class="font-heading mt-4 w-full bg-[#F15A24] py-3 font-semibold uppercase"
+          >
             Minta Penawaran
           </button>
         </div>
@@ -163,3 +167,10 @@ onUnmounted(() => {
     </Transition>
   </header>
 </template>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+</style>

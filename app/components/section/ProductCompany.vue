@@ -1,5 +1,12 @@
 <script setup lang="ts">
 import { ChevronRight, ArrowRight } from "lucide-vue-next";
+import produk1 from "~/assets/images/produk1.jpg";
+import produk2 from "~/assets/images/produk2.jpg";
+import produk3 from "~/assets/images/produk3.jpg";
+import produk4 from "~/assets/images/produk4.jpg";
+import produk5 from "~/assets/images/produk5.jpg";
+import produk6 from "~/assets/images/produk6.jpg";
+
 interface Spec {
   label: string;
   value: string;
@@ -43,7 +50,7 @@ const products = [
     code: "MLS-04",
     title: "Multi Leaf Spring",
     description: "Pegas daun bertingkat klasik untuk truk niaga sedang & berat.",
-    image: "https://images.pexels.com/photos/37175105/pexels-photo-37175105.jpeg",
+    image: produk1,
     specs: ["Beban: 4-12 ton", "Material: SUP-9", "Aplikasi: Truk Tronton, Dump Truck"],
   },
   {
@@ -51,37 +58,35 @@ const products = [
     title: "Parabolic Spring",
     description:
       "Lebih ringan dengan distribusi beban merata dan kenyamanan lebih tinggi.",
-    image: "https://images.pexels.com/photos/3846205/pexels-photo-3846205.jpeg",
+    image: produk2,
     specs: ["Beban: 2-8 ton", "Material: SUP-11A", "Aplikasi: Bus, Pickup, Light Truck"],
   },
   {
     code: "TRL-09",
     title: "Trailer Spring",
     description: "Dirancang untuk trailer heavy-duty dengan daya tahan maksimum.",
-    image: "https://images.pexels.com/photos/4489732/pexels-photo-4489732.jpeg",
+    image: produk3,
     specs: ["Beban: 10-20 ton", "Material: SUP-9", "Aplikasi: Trailer, Semi Trailer"],
   },
   {
     code: "AGR-05",
     title: "Agriculture Spring",
     description: "Pegas daun khusus kendaraan dan mesin pertanian berkapasitas besar.",
-    image:
-      "https://images.pexels.com/photos/159298/gears-cogs-machine-machinery-159298.jpeg",
+    image: produk4,
     specs: ["Beban: 3-10 ton", "Material: SUP-11A", "Aplikasi: Tractor, Harvester"],
   },
   {
     code: "BUS-08",
     title: "Bus Suspension",
     description: "Memberikan kestabilan dan kenyamanan optimal pada kendaraan penumpang.",
-    image: "https://images.pexels.com/photos/210019/pexels-photo-210019.jpeg",
+    image: produk5,
     specs: ["Beban: 6-14 ton", "Material: SUP-9", "Aplikasi: Bus Kota, Bus Pariwisata"],
   },
   {
     code: "CUS-10",
     title: "Custom Leaf Spring",
     description: "Diproduksi sesuai spesifikasi OEM maupun kebutuhan aftermarket.",
-    image:
-      "https://images.pexels.com/photos/162553/keys-workshop-mechanic-tools-162553.jpeg",
+    image: produk6,
     specs: ["Custom Design", "Material: SUP-9 / SUP-11A", "OEM & Aftermarket"],
   },
 ];
@@ -92,14 +97,14 @@ const products = [
     <section class="relative mx-auto mb-24 max-w-[1440px] px-6 pt-40 lg:px-12">
       <div class="max-w-3xl">
         <p
-          class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-[#F05A22] md:text-sm"
+          class="font-heading mb-5 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22] md:text-md"
         >
           <span class="h-px w-10 bg-[#F05A22]"></span>
           JAJARAN PRODUK
         </p>
 
         <h2
-          class="font-display text-4xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-6xl xl:text-7xl"
+          class="font-heading text-4xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-6xl xl:text-8xl"
         >
           LEAF SPRING UNTUK SETIAP MEDAN
         </h2>
@@ -135,7 +140,7 @@ const products = [
 
           <!-- Content -->
           <div class="p-7">
-            <h3 class="mb-3 text-2xl font-bold uppercase tracking-tight text-white">
+            <h3 class="font-heading mb-3 text-3xl uppercase tracking-tight text-white">
               {{ product.title }}
             </h3>
 
@@ -170,7 +175,7 @@ const products = [
         </p>
 
         <h2
-          class="text-4xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-6xl xl:text-7xl"
+          class="font-heading text-4xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-6xl xl:text-7xl"
         >
           SPESIFIKASI TEKNIS UMUM
         </h2>
@@ -189,7 +194,7 @@ const products = [
               ]"
             >
               <td
-                class="w-[34%] px-6 py-5 align-top text-xs font-bold uppercase tracking-[0.2em] text-[#F05A22] md:text-sm"
+                class="font-heading w-[34%] px-6 py-5 align-top text-md uppercase tracking-[0.2em] text-[#F05A22] md:text-sm"
               >
                 {{ spec.label }}
               </td>
@@ -216,14 +221,14 @@ const products = [
           <!-- Content -->
           <div class="max-w-2xl">
             <p
-              class="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-[#F05A22]"
+              class="font-heading mb-4 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22]"
             >
               <span class="h-px w-10 bg-[#F05A22]" />
               CUSTOM OEM
             </p>
 
             <h3
-              class="text-3xl font-black uppercase leading-tight tracking-tight text-white md:text-4xl xl:text-5xl"
+              class="font-heading text-3xl font-black uppercase leading-tight tracking-tight text-white md:text-4xl xl:text-5xl"
             >
               Need a tailored leaf spring solution?
             </h3>
@@ -245,3 +250,8 @@ const products = [
     </section>
   </main>
 </template>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>

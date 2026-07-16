@@ -3,14 +3,12 @@
     <!-- ================= HERO ================= -->
 
     <section class="relative mx-auto mb-24 max-w-[1440px] px-6 pt-40 lg:px-12">
-      <p
-        class="mb-6 font-heading text-xs font-bold uppercase tracking-[0.3em] text-[#F05A22]"
-      >
+      <p class="mb-6 font-heading text-md uppercase tracking-[0.3em] text-[#F05A22]">
         — Profil Perusahaan
       </p>
 
       <h1
-        class="text-[clamp(3rem,10vw,8.5rem)] font-black uppercase leading-[0.85] tracking-tight text-white"
+        class="font-heading text-[clamp(5rem,20vw,11rem)] font-black uppercase leading-[0.85] tracking-tight text-white"
       >
         <span class="block"> MENEMPA </span>
 
@@ -208,13 +206,13 @@
             <!-- Heading -->
             <div class="max-w-3xl">
               <p
-                class="mb-4 font-heading text-xs font-bold uppercase tracking-[0.3em] text-[#F05A22] md:text-sm"
+                class="mb-4 font-heading text-md uppercase tracking-[0.3em] text-[#F05A22] md:text-sm"
               >
                 — KAPABILITAS PABRIK
               </p>
 
               <h2
-                class="font-display text-4xl uppercase leading-[0.9] tracking-tight text-white md:text-6xl"
+                class="font-heading font-display text-5xl uppercase leading-[0.9] tracking-tight text-white md:text-7xl"
               >
                 KAPABILITAS PABRIK
               </h2>
@@ -235,7 +233,7 @@
               >
                 <component :is="item.icon" class="h-5 w-5 shrink-0 text-[#F05A22]" />
 
-                <span class="font-heading text-xs uppercase tracking-widest text-white">
+                <span class="font-heading text-md uppercase tracking-widest text-white">
                   {{ item.title }}
                 </span>
               </div>
@@ -259,9 +257,9 @@
 </template>
 
 <script setup lang="ts">
-import factoryImage from "~/assets/images/produk1.jpg";
-import steelImage from "~/assets/images/produk2.jpg";
-import capabilityImage from "~/assets/images/produk2.jpg";
+import factoryImage from "~/assets/images/profile1.jpg";
+import steelImage from "~/assets/images/profile2.jpg";
+import capabilityImage from "~/assets/images/profile2.jpg";
 
 import {
   Heart,
@@ -341,6 +339,9 @@ const capabilities = [
 </script>
 
 <style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
 .timeline-line {
   transform-origin: top;
   animation: growLine 1.4s ease forwards;

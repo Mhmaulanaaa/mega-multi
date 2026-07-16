@@ -64,7 +64,7 @@ const countries = [
       <div class="max-w-3xl">
         <!-- Eyebrow -->
         <p
-          class="mb-5 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.35em] text-[#F05A22] md:text-sm"
+          class="font-heading mb-5 flex items-center gap-3 text-sm uppercase tracking-[0.35em] text-[#F05A22] md:text-md"
         >
           <span class="h-px w-10 bg-[#F05A22]"></span>
           PANGSA PASAR &amp; DISTRIBUSI
@@ -72,11 +72,9 @@ const countries = [
 
         <!-- Title -->
         <h2
-          class="text-4xl font-black uppercase leading-[0.9] tracking-tight text-white md:text-6xl xl:text-7xl"
+          class="font-heading text-4xl font-black uppercase text-white md:text-6xl xl:text-8xl"
         >
-          JANGKAUAN GLOBAL,
-          <br class="hidden md:block" />
-          FONDASI LOKAL
+          JANGKAUAN GLOBAL, FONDASI LOKAL
         </h2>
 
         <!-- Description -->
@@ -109,7 +107,9 @@ const countries = [
           />
 
           <!-- Number -->
-          <h3 class="text-3xl font-black tracking-tight text-white md:text-5xl">
+          <h3
+            class="font-heading text-3xl font-black tracking-tight text-white md:text-5xl"
+          >
             {{ item.value }}
           </h3>
 
@@ -134,7 +134,7 @@ const countries = [
 
     <section class="mx-auto mb-20 max-w-[1440px] px-6 lg:px-12">
       <p
-        class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#F05A22]"
+        class="font-heading mb-6 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22]"
       >
         <span class="h-px w-6 bg-[#F05A22]" />
         Dipercaya Oleh
@@ -154,7 +154,7 @@ const countries = [
           />
 
           <span
-            class="text-center text-base font-semibold uppercase tracking-tight text-white/40 transition-all duration-300 group-hover:scale-105 group-hover:text-[#F05A22] md:text-xl"
+            class="font-heading text-center text-base uppercase tracking-tight text-white/40 transition-all duration-300 group-hover:scale-105 group-hover:text-[#F05A22] md:text-xl"
           >
             {{ partner }}
           </span>
@@ -167,7 +167,7 @@ const countries = [
     <section class="mx-auto mb-24 max-w-[1440px] px-6 lg:px-12">
       <div class="border border-[#272A30] bg-[#15171C]/40 p-8 md:p-12">
         <p
-          class="mb-8 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#F05A22]"
+          class="font-heading mb-8 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22]"
         >
           <span class="h-px w-6 bg-[#F05A22]" />
           Negara Tujuan Ekspor
@@ -177,7 +177,7 @@ const countries = [
           <span
             v-for="country in countries"
             :key="country"
-            class="cursor-pointer border border-[#272A30] px-4 py-2 text-xs font-medium uppercase tracking-[0.2em] text-white/80 transition-all duration-300 hover:border-[#F05A22] hover:bg-[#F05A22]/5 hover:text-[#F05A22]"
+            class="font-heading cursor-pointer border border-[#272A30] px-4 py-2 text-md uppercase tracking-[0.2em] text-white/80 transition-all duration-300 hover:border-[#F05A22] hover:bg-[#F05A22]/5 hover:text-[#F05A22]"
           >
             {{ country }}
           </span>
@@ -186,3 +186,8 @@ const countries = [
     </section>
   </main>
 </template>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>

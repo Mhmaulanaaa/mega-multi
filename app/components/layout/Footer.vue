@@ -46,7 +46,7 @@
 
         <!-- Links -->
         <div>
-          <h4 class="mb-4 font-heading text-xs uppercase tracking-[0.3em] text-[#F15A24]">
+          <h4 class="mb-4 font-heading text-md uppercase tracking-[0.3em] text-[#F15A24]">
             TAUTAN CEPAT
           </h4>
 
@@ -61,7 +61,7 @@
 
         <!-- Contact -->
         <div>
-          <h4 class="mb-4 font-heading text-xs uppercase tracking-[0.3em] text-[#F15A24]">
+          <h4 class="mb-4 font-heading text-md uppercase tracking-[0.3em] text-[#F15A24]">
             KONTAK
           </h4>
 
@@ -85,7 +85,7 @@
 
         <!-- Certification -->
         <div>
-          <h4 class="mb-4 font-heading text-xs uppercase tracking-[0.3em] text-[#F15A24]">
+          <h4 class="mb-4 font-heading text-md uppercase tracking-[0.3em] text-[#F15A24]">
             SERTIFIKASI
           </h4>
 
@@ -124,3 +124,8 @@ const year = new Date().getFullYear();
 
 const certifications = ["IATF 16949", "ISO 9001", "ISO 14001", "OHSAS 18001"];
 </script>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>

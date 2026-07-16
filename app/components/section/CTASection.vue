@@ -9,7 +9,9 @@
       >
         <!-- Left -->
         <div>
-          <p class="font-heading mb-3 text-xs uppercase tracking-[0.3em] text-[#F15A24]">
+          <p
+            class="font-heading mb-4 text-md uppercase tracking-[6px] text-[#F15A24] md:text-sm"
+          >
             — MINTA PENAWARAN
           </p>
 
@@ -22,7 +24,7 @@
 
         <!-- Right -->
         <button
-          class="inline-flex items-center gap-2 whitespace-nowrap bg-[#F15A24] px-8 py-5 font-heading text-sm uppercase tracking-widest text-white transition-all duration-300 hover:bg-[#C43015] hover:shadow-[0_15px_35px_rgba(241,90,36,0.35)]"
+          class="inline-flex items-center gap-2 whitespace-nowrap bg-[#F15A24] px-8 py-5 text-sm uppercase tracking-widest text-white transition-all duration-300 hover:bg-[#C43015] hover:shadow-[0_15px_35px_rgba(241,90,36,0.35)]"
         >
           Hubungi Kami
           <ArrowRight class="h-4 w-4" />
@@ -35,3 +37,8 @@
 <script setup lang="ts">
 import { ArrowRight } from "lucide-vue-next";
 </script>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>

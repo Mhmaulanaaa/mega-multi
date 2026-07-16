@@ -79,14 +79,14 @@ const departments = [
   <main class="bg-[#0B0C10] text-white">
     <section class="relative mx-auto mb-24 max-w-[1440px] px-6 pt-40 lg:px-12">
       <p
-        class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#F05A22]"
+        class="font-heading mb-6 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22]"
       >
         <span class="h-px w-6 bg-[#F05A22]" />
         HUBUNGI KAMI
       </p>
 
       <h1
-        class="text-[clamp(3rem,10vw,8.5rem)] font-black uppercase leading-[0.85] tracking-tight text-white"
+        class="font-heading text-[clamp(3rem,10vw,11rem)] font-black uppercase leading-[0.85] tracking-tight text-white"
       >
         <span class="block">MARI</span>
         <span class="block text-[#F05A22]">BERDISKUSI.</span>
@@ -114,7 +114,7 @@ const departments = [
             class="mb-6 h-7 w-7 text-[#F05A22] transition-transform duration-300 group-hover:scale-110"
           />
 
-          <p class="mb-4 text-xs font-semibold uppercase tracking-[0.3em] text-[#9CA3AF]">
+          <p class="font-heading mb-4 text-md uppercase tracking-[0.3em] text-[#9CA3AF]">
             {{ item.title }}
           </p>
 
@@ -156,7 +156,7 @@ const departments = [
           class="group border border-[#272A30] bg-[#0B0C10] p-8 transition-all duration-300 hover:border-[#F05A22] md:p-10"
         >
           <p
-            class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#F05A22]"
+            class="font-heading mb-6 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22]"
           >
             <span class="h-px w-6 bg-[#F05A22]" />
             {{ dept.title }}
@@ -188,7 +188,7 @@ const departments = [
 
           <a
             :href="dept.emailHref"
-            class="mt-8 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/70 transition-all duration-300 hover:text-[#F05A22]"
+            class="font-heading mt-8 inline-flex items-center gap-2 text-md uppercase tracking-[0.25em] text-white/70 transition-all duration-300 hover:text-[#F05A22]"
           >
             Kirim Email
 
@@ -204,7 +204,7 @@ const departments = [
 
     <section class="mx-auto mb-24 max-w-[1440px] px-6 lg:px-12">
       <p
-        class="mb-6 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-[#F05A22]"
+        class="font-heading mb-6 flex items-center gap-3 text-md uppercase tracking-[0.35em] text-[#F05A22]"
       >
         <span class="h-px w-6 bg-[#F05A22]" />
         Lokasi Pabrik
@@ -224,3 +224,8 @@ const departments = [
     </section>
   </main>
 </template>
+<style scoped>
+.font-heading {
+  font-family: "Bebas Neue", sans-serif;
+}
+</style>
